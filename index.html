@@ -24,7 +24,7 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
     .gradient-text {
       background: linear-gradient(135deg, #f97316, #ea580c);
@@ -32,11 +32,9 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .glow { box-shadow: 0 0 40px rgba(249, 115, 22, 0.08); }
-    .dark .glow { box-shadow: 0 0 60px rgba(249, 115, 22, 0.06); }
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(249,115,22,0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(249,115,22,0.15), transparent);
     }
   </style>
 </head>
@@ -59,40 +57,49 @@
   </nav>
 
   <!-- Hero -->
-  <section class="min-h-screen flex items-center px-8">
+  <section class="pt-32 pb-16 px-8">
     <div class="max-w-5xl mx-auto w-full">
-      <p class="font-mono text-sm text-orange-500 mb-6 tracking-wide">Senior DevOps / SRE</p>
-      <h1 class="text-6xl sm:text-8xl font-extrabold tracking-tighter text-neutral-900 dark:text-white leading-none mb-8">
-        Nate<br><span class="gradient-text">Simonsen</span>
+      <p class="font-mono text-sm text-orange-500 mb-4 tracking-wide">Senior DevOps / SRE</p>
+      <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tighter text-neutral-900 dark:text-white leading-none mb-6">
+        Nate <span class="gradient-text">Simonsen</span>
       </h1>
-      <p class="text-xl sm:text-2xl text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed font-light mb-12">
-        I build the infrastructure that lets teams ship. I design systems nobody has to think about. I fix them when they break. I write the docs so nobody has to call me at 2 AM.
+      <p class="text-lg text-neutral-500 dark:text-neutral-400 max-w-xl leading-relaxed mb-8">
+        Infrastructure and platform engineer. I keep systems running, help teams deploy, and automate the things that shouldn't need a human.
       </p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <span class="px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm">Kubernetes</span>
+        <span class="px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm">Terraform</span>
+        <span class="px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm">AWS</span>
+        <span class="px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm">Go</span>
+        <span class="px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm">Docker</span>
+      </div>
       <div class="flex gap-4">
-        <a href="#work" class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg transition-colors">
+        <a href="#work" class="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg transition-colors">
           View Work
         </a>
-        <a href="#contact" class="px-8 py-4 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 text-sm font-medium rounded-lg hover:border-orange-500/40 hover:text-orange-500 transition-all">
+        <a href="#contact" class="px-6 py-3 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 text-sm font-medium rounded-lg hover:border-orange-500/40 hover:text-orange-500 transition-all">
           Get in Touch
         </a>
       </div>
     </div>
   </section>
 
+  <div class="divider max-w-2xl mx-auto"></div>
+
   <!-- About -->
-  <section id="about" class="py-32 px-8">
+  <section id="about" class="py-16 px-8">
     <div class="max-w-5xl mx-auto fade-in">
-      <div class="grid lg:grid-cols-[1fr_1.5fr] gap-16">
+      <div class="grid lg:grid-cols-[1fr_1.5fr] gap-12">
         <div>
-          <p class="font-mono text-sm text-orange-500 mb-4">01 / About</p>
-          <h2 class="text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">The infrastructure layer between architecture and execution.</h2>
+          <p class="font-mono text-sm text-orange-500 mb-3">About</p>
+          <h2 class="text-2xl font-bold text-neutral-900 dark:text-white tracking-tight">Infrastructure, platform work, and the stuff in between.</h2>
         </div>
-        <div class="space-y-6 text-lg leading-relaxed">
+        <div class="space-y-4 text-[15px] leading-relaxed">
           <p>
-            Teams call me when the deploy pipeline breaks. When a cluster is on fire. When someone needs a new AWS environment by Thursday. I design systems at the architecture level. I also do the ground-floor work of unblocking developers one environment at a time.
+            Most of my time goes toward Kubernetes clusters, CI/CD pipelines, and cloud provisioning on AWS. I also spend a fair amount of time helping developers debug environment issues and unblocking deploys.
           </p>
           <p>
-            I operate in three modes. <span class="text-neutral-900 dark:text-neutral-200 font-medium">Architect</span>: I design multi-VPC, multi-cluster EKS environments with Terraform. <span class="text-neutral-900 dark:text-neutral-200 font-medium">Firefighter</span>: I debug memory leaks and production DNS issues in four-hour sessions. <span class="text-neutral-900 dark:text-neutral-200 font-medium">Teacher</span>: I write runbooks. I build CLI tools that spread knowledge across the team.
+            I design infrastructure with Terraform. I handle production incidents. I write runbooks and build internal CLI tools so that knowledge doesn't live in one person's head.
           </p>
         </div>
       </div>
@@ -102,25 +109,25 @@
   <div class="divider max-w-2xl mx-auto"></div>
 
   <!-- Capabilities -->
-  <section class="py-32 px-8">
+  <section class="py-16 px-8">
     <div class="max-w-5xl mx-auto fade-in">
-      <p class="font-mono text-sm text-orange-500 mb-12">02 / Capabilities</p>
-      <div class="grid sm:grid-cols-2 gap-x-16 gap-y-12">
+      <p class="font-mono text-sm text-orange-500 mb-8">Capabilities</p>
+      <div class="grid sm:grid-cols-2 gap-x-16 gap-y-8">
         <div>
-          <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">Platform Architecture</h3>
-          <p class="leading-relaxed">Multi-cluster EKS environments, zero-downtime migrations, Terraform across AWS accounts, VPC peering, TLS/DNS, ACM certificates. Architecture that scales without surprises.</p>
+          <h3 class="text-base font-semibold text-neutral-900 dark:text-white mb-2">Platform Architecture</h3>
+          <p class="text-[15px] leading-relaxed">EKS clusters, VPC peering, TLS/DNS, Terraform across multiple AWS accounts. Zero-downtime migrations.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">Developer Experience</h3>
-          <p class="leading-relaxed">Primary support for ephemeral environments. Built CLI tooling, onboarding automation, and AI-assisted debugging agents. Engineers ship. They don't wait.</p>
+          <h3 class="text-base font-semibold text-neutral-900 dark:text-white mb-2">Developer Experience</h3>
+          <p class="text-[15px] leading-relaxed">Ephemeral environments, CLI tooling, onboarding automation. Reducing friction so engineers can focus on their work.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">Reliability</h3>
-          <p class="leading-relaxed">I own the pager. I own the post-mortem. Resolved outages across Cloudflare, GitHub Actions, and Docker. Every major upgrade executed with zero downtime.</p>
+          <h3 class="text-base font-semibold text-neutral-900 dark:text-white mb-2">Reliability</h3>
+          <p class="text-[15px] leading-relaxed">On-call, incident response, post-mortems. Resolved outages across Cloudflare, GitHub Actions, and Docker.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">Security and Compliance</h3>
-          <p class="leading-relaxed">I manage Okta integrations, IRSA roles, and certificate renewals. The critical work that keeps things running quietly.</p>
+          <h3 class="text-base font-semibold text-neutral-900 dark:text-white mb-2">Security</h3>
+          <p class="text-[15px] leading-relaxed">Okta integrations, IRSA roles, certificate renewals. Keeping the security posture solid without slowing anyone down.</p>
         </div>
       </div>
     </div>
@@ -129,98 +136,69 @@
   <div class="divider max-w-2xl mx-auto"></div>
 
   <!-- Work -->
-  <section id="work" class="py-32 px-8">
+  <section id="work" class="py-16 px-8">
     <div class="max-w-5xl mx-auto fade-in">
-      <p class="font-mono text-sm text-orange-500 mb-12">03 / Select Work</p>
+      <p class="font-mono text-sm text-orange-500 mb-8">Work</p>
 
       <div class="space-y-0">
-        <a href="#" class="group block py-8 border-b border-neutral-100 dark:border-neutral-900 hover:border-orange-500/30 transition-colors">
+        <div class="py-6 border-b border-neutral-100 dark:border-neutral-900">
           <div class="flex items-start justify-between gap-8">
             <div>
-              <h3 class="text-2xl font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors mb-2">Temporal EKS Migration</h3>
-              <p class="max-w-xl">Migrated Temporal workflow engine to dedicated EKS clusters. TLS/DNS configuration, VPC peering across AWS accounts, zero-downtime production cutover.</p>
+              <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-1">Infrastructure Migration</h3>
+              <p class="text-[15px] max-w-xl">Moved core services to dedicated EKS clusters. Handled TLS, DNS, VPC peering, and production cutover with no downtime.</p>
             </div>
-            <span class="font-mono text-sm text-neutral-300 dark:text-neutral-700 shrink-0 pt-2">2025</span>
+            <span class="font-mono text-xs text-neutral-300 dark:text-neutral-700 shrink-0 pt-1">2025</span>
           </div>
-          <div class="flex gap-4 mt-3">
-            <span class="font-mono text-xs text-orange-500/60">eks</span>
-            <span class="font-mono text-xs text-orange-500/60">terraform</span>
-            <span class="font-mono text-xs text-orange-500/60">temporal</span>
-            <span class="font-mono text-xs text-orange-500/60">tls</span>
+          <div class="flex gap-3 mt-2">
+            <span class="font-mono text-xs text-orange-500/50">eks</span>
+            <span class="font-mono text-xs text-orange-500/50">terraform</span>
+            <span class="font-mono text-xs text-orange-500/50">aws</span>
           </div>
-        </a>
+        </div>
 
-        <a href="#" class="group block py-8 border-b border-neutral-100 dark:border-neutral-900 hover:border-orange-500/30 transition-colors">
+        <div class="py-6 border-b border-neutral-100 dark:border-neutral-900">
           <div class="flex items-start justify-between gap-8">
             <div>
-              <h3 class="text-2xl font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors mb-2">Cloud Cost Optimization</h3>
-              <p class="max-w-xl">Audited and reduced Datadog and AWS spend. Identified unused metrics, adjusted infrastructure integrations, right-sized resources across multiple accounts.</p>
+              <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-1">Cost Optimization</h3>
+              <p class="text-[15px] max-w-xl">Audited monitoring and cloud spend. Removed unused metrics, adjusted integrations, right-sized resources across accounts.</p>
             </div>
-            <span class="font-mono text-sm text-neutral-300 dark:text-neutral-700 shrink-0 pt-2">2024 - 25</span>
+            <span class="font-mono text-xs text-neutral-300 dark:text-neutral-700 shrink-0 pt-1">2024 - 25</span>
           </div>
-          <div class="flex gap-4 mt-3">
-            <span class="font-mono text-xs text-orange-500/60">aws</span>
-            <span class="font-mono text-xs text-orange-500/60">datadog</span>
-            <span class="font-mono text-xs text-orange-500/60">finops</span>
+          <div class="flex gap-3 mt-2">
+            <span class="font-mono text-xs text-orange-500/50">aws</span>
+            <span class="font-mono text-xs text-orange-500/50">datadog</span>
+            <span class="font-mono text-xs text-orange-500/50">finops</span>
           </div>
-        </a>
+        </div>
 
-        <a href="#" class="group block py-8 border-b border-neutral-100 dark:border-neutral-900 hover:border-orange-500/30 transition-colors">
+        <div class="py-6 border-b border-neutral-100 dark:border-neutral-900">
           <div class="flex items-start justify-between gap-8">
             <div>
-              <h3 class="text-2xl font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors mb-2">Internal Developer Platform</h3>
-              <p class="max-w-xl">Built CLI tooling, ephemeral environment management, onboarding plugins, and AI-assisted debugging agents. Reduced developer friction and support load across the org.</p>
+              <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-1">Developer Platform</h3>
+              <p class="text-[15px] max-w-xl">Built internal CLI tools, environment management, and onboarding automation. Reduced support load and developer setup time.</p>
             </div>
-            <span class="font-mono text-sm text-neutral-300 dark:text-neutral-700 shrink-0 pt-2">2024 - 25</span>
+            <span class="font-mono text-xs text-neutral-300 dark:text-neutral-700 shrink-0 pt-1">2024 - 25</span>
           </div>
-          <div class="flex gap-4 mt-3">
-            <span class="font-mono text-xs text-orange-500/60">go</span>
-            <span class="font-mono text-xs text-orange-500/60">python</span>
-            <span class="font-mono text-xs text-orange-500/60">cli</span>
-            <span class="font-mono text-xs text-orange-500/60">dx</span>
+          <div class="flex gap-3 mt-2">
+            <span class="font-mono text-xs text-orange-500/50">go</span>
+            <span class="font-mono text-xs text-orange-500/50">python</span>
+            <span class="font-mono text-xs text-orange-500/50">cli</span>
           </div>
-        </a>
+        </div>
 
-        <a href="#" class="group block py-8 border-b border-neutral-100 dark:border-neutral-900 hover:border-orange-500/30 transition-colors">
+        <div class="py-6 border-b border-neutral-100 dark:border-neutral-900">
           <div class="flex items-start justify-between gap-8">
             <div>
-              <h3 class="text-2xl font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors mb-2">Incident Response and SRE</h3>
-              <p class="max-w-xl">Primary on-call for production infrastructure. Resolved outages across Cloudflare, GitHub Actions, and Docker registries. Authored post-mortems and remediation runbooks.</p>
+              <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-1">Incident Response</h3>
+              <p class="text-[15px] max-w-xl">Primary on-call for production. Handled outages, wrote post-mortems, built remediation runbooks.</p>
             </div>
-            <span class="font-mono text-sm text-neutral-300 dark:text-neutral-700 shrink-0 pt-2">Ongoing</span>
+            <span class="font-mono text-xs text-neutral-300 dark:text-neutral-700 shrink-0 pt-1">Ongoing</span>
           </div>
-          <div class="flex gap-4 mt-3">
-            <span class="font-mono text-xs text-orange-500/60">sre</span>
-            <span class="font-mono text-xs text-orange-500/60">incident response</span>
-            <span class="font-mono text-xs text-orange-500/60">runbooks</span>
+          <div class="flex gap-3 mt-2">
+            <span class="font-mono text-xs text-orange-500/50">sre</span>
+            <span class="font-mono text-xs text-orange-500/50">incident response</span>
           </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider max-w-2xl mx-auto"></div>
-
-  <!-- Tools -->
-  <section class="py-32 px-8">
-    <div class="max-w-5xl mx-auto fade-in">
-      <p class="font-mono text-sm text-orange-500 mb-12">04 / Toolbox</p>
-      <div class="flex flex-wrap gap-3">
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Kubernetes</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Terraform</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">AWS</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Go</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Docker</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Helm</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">ArgoCD</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">GitHub Actions</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Datadog</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Prometheus</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Grafana</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Temporal</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Python</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Linux</span>
-        <span class="px-4 py-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-sm font-medium">Okta</span>
+        </div>
       </div>
     </div>
   </section>
@@ -228,24 +206,21 @@
   <div class="divider max-w-2xl mx-auto"></div>
 
   <!-- Contact -->
-  <section id="contact" class="py-32 px-8">
-    <div class="max-w-5xl mx-auto fade-in text-center">
-      <p class="font-mono text-sm text-orange-500 mb-6">05 / Contact</p>
-      <h2 class="text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight mb-6">Let's talk.</h2>
-      <p class="text-lg text-neutral-500 dark:text-neutral-400 max-w-md mx-auto mb-10">
-        Open to conversations about infrastructure, platform engineering, or interesting problems.
-      </p>
-      <div class="flex gap-6 justify-center text-sm">
-        <a href="mailto:hello@natesimonsen.com" class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors">Email Me</a>
-        <a href="https://github.com/natesimonsen" target="_blank" rel="noopener" class="px-8 py-4 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium rounded-lg hover:border-orange-500/40 hover:text-orange-500 transition-all">GitHub</a>
-        <a href="https://linkedin.com/in/natesimonsen" target="_blank" rel="noopener" class="px-8 py-4 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium rounded-lg hover:border-orange-500/40 hover:text-orange-500 transition-all">LinkedIn</a>
+  <section id="contact" class="py-16 px-8">
+    <div class="max-w-5xl mx-auto fade-in">
+      <p class="font-mono text-sm text-orange-500 mb-3">Contact</p>
+      <p class="text-[15px] mb-6">Happy to chat about infrastructure, platform engineering, or interesting problems.</p>
+      <div class="flex gap-5 text-sm">
+        <a href="mailto:hello@natesimonsen.com" class="text-neutral-900 dark:text-neutral-200 hover:text-orange-500 transition-colors">Email</a>
+        <a href="https://github.com/natesimonsen" target="_blank" rel="noopener" class="text-neutral-900 dark:text-neutral-200 hover:text-orange-500 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/natesimonsen" target="_blank" rel="noopener" class="text-neutral-900 dark:text-neutral-200 hover:text-orange-500 transition-colors">LinkedIn</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-neutral-100 dark:border-neutral-900">
-    <div class="max-w-5xl mx-auto px-8 py-8 flex justify-between items-center">
+    <div class="max-w-5xl mx-auto px-8 py-6 flex justify-between items-center">
       <p class="font-mono text-xs text-neutral-300 dark:text-neutral-700">Nate Simonsen</p>
       <p class="font-mono text-xs text-neutral-300 dark:text-neutral-700">2026</p>
     </div>
